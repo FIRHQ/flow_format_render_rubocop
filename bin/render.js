@@ -23,7 +23,20 @@ if (!rubocopResult && !rubocopResultFile) {
   rubocopResultFile = path.join(__dirname, '../tests/rubocop_result.json');
 }
 
+var project = {
+  name: process.env.FLOW_PROJECT_NAME,
+  id: process.env.FLOW_USER_ID
+}
+
+var event = {
+  number: process.env.FLOW_EVENT_NUMBER,
+  id: process.env.FLOW_EVENT_ID
+}
+
 renderer({
+  project: project,
+
+  event: event,
 
   template: path.join(__dirname, '../lib/templates/layout.jade'),
 

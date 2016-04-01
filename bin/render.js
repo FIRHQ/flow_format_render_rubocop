@@ -25,7 +25,7 @@ if (!rubocopResult && !rubocopResultFile) {
 
 var project = {
   name: process.env.FLOW_PROJECT_NAME,
-  id: process.env.FLOW_USER_ID
+  id: process.env.FLOW_PROJECT_ID
 }
 
 var event = {

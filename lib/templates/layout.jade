@@ -84,13 +84,14 @@ html(lang='en')
       .file-wrap{
         border-radius: 5px;
         border: 1px solid #cbcbcb;
-        box-shadow: 0px 0px 3px 3px #e6e6ea;
+        box-shadow: 0px 0px 0px 6px #e6e6ea;
         overflow: hidden;
         margin-bottom: 40px;
       }
       .file-wrap .file-name{
         padding: 20px;
         background-color: #f6f6f6;
+        background: linear-gradient(to top, #f1f1f1, #f9f9f9);
         font-size: 16px;
       }
       .file-wrap .content .item{
@@ -105,7 +106,7 @@ html(lang='en')
         padding: 4px 8px;
       }
       .file-wrap .content .item .location{
-        flex: 0 0 auto;
+        flex: 0 0 100px;
         margin: 0px 20px;
         padding: 4px 0px;
       }
@@ -159,7 +160,7 @@ html(lang='en')
               each offense in file.offenses
                 div.item
                   div.severity(class="severity-#{offense.severity}") #{offense.severity}
-                  div.location.text-grey L:#{offense.location.line},&nbsp;C:#{offense.location.column}
+                  div.location.text-grey L:&nbsp;#{offense.location.line},&nbsp;C:&nbsp;#{offense.location.column}
                   div.offense
                     div.message #{offense.message}
                     div.text-grey.cop_name #{offense.cop_name}

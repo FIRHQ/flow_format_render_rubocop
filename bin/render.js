@@ -33,10 +33,16 @@ var event = {
   id: process.env.FLOW_EVENT_ID
 }
 
+var job = {
+  id: process.env.FLOW_JOB_ID
+}
+
 renderer({
   project: project,
 
   event: event,
+
+  job: job,
 
   template: path.join(__dirname, '../lib/templates/layout.jade'),
 
